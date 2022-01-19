@@ -68,7 +68,7 @@
       TOTAL DE RECEITAS
     </div>
     <div class="card-body">
-      <h3 class="card-title">1500</h3>
+      <h3 class="card-title">{{revenueTotal}}</h3>
     </div>
   </div>
 
@@ -77,7 +77,7 @@
       TOTAL DE DESPESAS
     </div>
     <div class="card-body">
-      <h3 class="card-title">1200</h3>
+      <h3 class="card-title">{{expenseTotal}}</h3>
     </div>
   </div>
 
@@ -86,10 +86,9 @@
       SALDO
     </div>
     <div class="card-body">
-      <h3 class="card-title">300</h3>
+      <h3 class="card-title">{{balance}}</h3>
     </div>
   </div>
-
 
 </div>
 
@@ -97,9 +96,9 @@
 
 <div class="row mt-5 mb-4">
   <div class="col-md-6">
-    GRAFICO DE RECEITAS
+    <p-chart type="bar" [data]="revenueChartData" [options]="chartOptions"></p-chart>
   </div>
   <div class="col-md-6">
-    GRAFICO DE DESPESAS
+    <p-chart type="bar" [data]="expenseChartData" [options]="chartOptions"></p-chart>
   </div>
 </div>
